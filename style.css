@@ -1,21 +1,30 @@
+/*CSS GERAL*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/*VARIAVEIS CSS*/
 :root {
   --cor-um: #ffffff;
   --cor-dois: #000000;
   --cor-tres: #f0a500;
   --cor-quatro: #2fa4ff;
+  --cor-cinco: #777777;
   --fonte-um: "Open Sans", sans-serif;
   --fonte-dois: "Roboto", sans-serif;
   --fonte-tres: "Arvo", serif;
 }
+/*FUNDO FINAL DO SITE*/
 body {
   display: flex;
   justify-content: center;
 }
+/*HEADER*/
+#welcome {
+  background: var(--cor-dois);
+}
+/*NAVEGAÇÃO DE LINKS*/
 #welcome nav {
   display: flex;
   justify-content: space-between;
@@ -54,7 +63,6 @@ body {
   background-color: var(--cor-um);
   border-radius: 5px;
 }
-
 #welcome nav ul:nth-child(2) li:hover {
   cursor: pointer;
   transition: 500ms;
@@ -63,4 +71,79 @@ body {
 }
 #welcome nav ul:nth-child(1) li:nth-child(1) {
   color: var(--cor-quatro);
+}
+/*CONTEÚDO DO HEADER*/
+#apresentacao {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*TEXTO DO CONTEÚDO DO HEADER*/
+#apresentacao .iam h1 {
+  width: 90vw;
+  font-size: 60pt;
+  color: var(--cor-um);
+  font-family: var(--fonte-dois);
+}
+#apresentacao .iam p {
+  width: 80vmin;
+  color: var(--cor-cinco);
+  margin: 20px 0 30px 0;
+  font-family: var(--fonte-um);
+  font-weight: 600;
+}
+/*BOTÕES DO HEADER*/
+#btn {
+  display: flex;
+  flex-direction: row;
+}
+#btn button {
+  width: 170px;
+  height: 45px;
+  background: transparent;
+  color: var(--cor-um);
+  outline: none;
+  border-radius: 17px;
+  font-family: var(--fonte-dois);
+  font-weight: 100;
+}
+#btn button:nth-child(1) {
+  margin-right: 15px;
+  background-color: var(--cor-quatro);
+  border: none;
+}
+#btn button:nth-child(2) {
+  margin-left: 15px;
+  border: none;
+}
+#btn button:hover {
+  transition: 300ms;
+  border: 2px solid var(--cor-um);
+}
+#btn button:nth-child(1):hover {
+  background: transparent;
+  color: var(--cor-um);
+}
+#btn button:nth-child(2):hover {
+  color: var(--cor-quatro);
+  border: 2px solid var(--cor-quatro) !important;
+  background-color: transparent;
+}
+/*RESPONSIVIDADE*/
+@media (max-width: 600px) {
+  nav {
+    visibility: hidden;
+  }
+  #btn {
+    flex-direction: column;
+  }
+  #btn button:nth-child(1) {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  #btn button:nth-child(2) {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }

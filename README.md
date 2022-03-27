@@ -2,7 +2,7 @@
 <img src="LG.png" style="width: 150px;">
 <h2>Paleta de cores usadas</h2>
 <ul>
-<li>#000000</li>
+<li style="cor: #000000;">#000000</li>
 <li>#ffffff</li>
 <li>#F0A500</li>
 <li>#2FA4FF</li>
