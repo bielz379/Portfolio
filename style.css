@@ -116,6 +116,10 @@ body {
   transition: 300ms;
   border: 2px solid var(--cor-um);
 }
+main {
+  display: grid;
+  justify-items: center;
+}
 #planos {
   display: flex;
   justify-content: center;
@@ -176,6 +180,53 @@ body {
   border: 2px solid var(--cor-quatro);
   transition: 500ms;
 }
+#habilidades {
+  display: grid;
+  justify-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+#habilidades .habilidades-title-skills {
+  font-size: 35pt;
+  font-family: var(--fonte-tres);
+}
+#habilidades .habilidades-skills {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#habilidades .habilidades-skills .habilidades-skills-conteudo {
+  margin: 20px;
+}
+#habilidades .habilidades-skills .habilidades-skills-conteudo h2 {
+  font-size: 30pt;
+  font-family: var(--fonte-dois);
+  width: 40vw;
+}
+#habilidades .habilidades-skills .habilidades-skills-conteudo p {
+  font-size: 13pt;
+  font-family: var(--fonte-um);
+  font-weight: 100;
+  width: 75vmin;
+  color: var(--cor-cinco);
+}
+#habilidades .habilidades-skills .habilidades-skills-box {
+  height: 170px;
+  width: 170px;
+  background: var(--cor-quatro);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+#habilidades .habilidades-skills .habilidades-skills-box img {
+  width: 128px;
+  height: 128px;
+  padding: 5px;
+}
 
 /*RESPONSIVIDADE*/
 @media (max-width: 600px) {
@@ -192,5 +243,8 @@ body {
   #btn button:nth-child(2) {
     margin-left: 0px;
     margin-top: 10px;
+  }
+  .habilidades-skills {
+    flex-direction: column-reverse;
   }
 }
