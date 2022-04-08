@@ -16,12 +16,10 @@
   --fonte-tres: "Arvo", serif;
 }
 /*FUNDO FINAL DO SITE*/
-body {
-  display: flex;
-  justify-content: center;
-}
+
 /*HEADER*/
 #welcome {
+  height: 90vh;
   background: var(--cor-dois);
 }
 /*NAVEGAÇÃO DE LINKS*/
@@ -29,7 +27,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
   height: 10vh;
   background: var(--cor-dois);
 }
@@ -39,6 +36,9 @@ body {
 }
 #welcome nav ul li {
   list-style: none;
+}
+#welcome nav ul a {
+  text-decoration: none;
 }
 #welcome nav ul:nth-child(1) li {
   color: var(--cor-um);
@@ -94,42 +94,90 @@ body {
   font-weight: 600;
 }
 /*BOTÕES DO HEADER*/
-#btn {
-  display: flex;
-  flex-direction: row;
-}
+
 #btn button {
   width: 170px;
   height: 45px;
-  background: transparent;
+
   color: var(--cor-um);
   outline: none;
   border-radius: 17px;
   font-family: var(--fonte-dois);
   font-weight: 100;
-}
-#btn button:nth-child(1) {
-  margin-right: 15px;
   background-color: var(--cor-quatro);
   border: none;
 }
-#btn button:nth-child(2) {
-  margin-left: 15px;
-  border: none;
-}
+
 #btn button:hover {
+  background: transparent;
+  color: var(--cor-um);
   transition: 300ms;
   border: 2px solid var(--cor-um);
 }
-#btn button:nth-child(1):hover {
-  background: transparent;
+#planos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#planos div {
+  background: var(--cor-um);
+  width: 350px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.frio {
+  margin-right: 50px;
+}
+.frio ul li {
+  line-height: 2cm;
+}
+.quente {
+  margin-left: 50px;
+}
+.quente ul li {
+  line-height: 2cm;
+}
+#planos div h2 {
+  font-family: var(--fonte-um);
+  color: var(--cor-dois);
+  margin-top: 20px;
+}
+#planos div h3 {
+  font-size: 40pt;
+  margin: 20px 0 20px 0;
+  font-family: var(--fonte-dois);
+}
+#planos div ul li {
+  list-style: none;
+  color: var(--cor-cinco);
+  font-family: var(--fonte-um);
+  font-weight: 300;
+  font-size: 14pt;
+  text-align: center;
+}
+#planos div button {
+  width: 170px;
+  height: 45px;
+
+  outline: none;
+  border: none;
+  font-family: var(--fonte-dois);
+  font-weight: 100;
+  background: var(--cor-quatro);
   color: var(--cor-um);
 }
-#btn button:nth-child(2):hover {
+#planos div button:hover {
+  background: transparent;
   color: var(--cor-quatro);
-  border: 2px solid var(--cor-quatro) !important;
-  background-color: transparent;
+  border: 2px solid var(--cor-quatro);
+  transition: 500ms;
 }
+
 /*RESPONSIVIDADE*/
 @media (max-width: 600px) {
   nav {
