@@ -131,13 +131,11 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .frio {
-  margin-right: 50px;
 }
 .frio ul li {
   line-height: 2cm;
 }
 .quente {
-  margin-left: 50px;
 }
 .quente ul li {
   line-height: 2cm;
