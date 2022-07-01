@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li class="list active" data-filter="todos">Todos</li>
+        <li class="list" data-filter="pizzaria">Pizzaria</li>
+        <li class="list" data-filter="hamburgueria">Hamburgueria</li>
+        <li class="list" data-filter="pubs">Pubs</li>
+        <li class="list" data-filter="sushi">Sushi</li>
+        <li class="list" data-filter="restaurante">Restaurante</li>
+      </ul>
+      <div class="product">
+        <div class="itemBox" data-item="pizzaria">
+          <img src="image/pizza/1.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="hamburgueria">
+          <img src="image/hamburguer/1.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pubs">
+          <img src="image/pub/FPD - 001.jpg" alt="" />
+        </div>
+        <div class="itemBox" data-item="sushi">
+          <img src="image/sushi/1.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="restaurante">
+          <img src="image/restaurante/1.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pizzaria">
+          <img src="image/pizza/2.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="hamburgueria">
+          <img src="image/hamburguer/2.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pubs">
+          <img src="image/pub/FPD - 002.jpg" alt="" />
+        </div>
+        <div class="itemBox" data-item="sushi">
+          <img src="image/sushi/2.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="restaurante">
+          <img src="image/restaurante/2.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pizzaria">
+          <img src="image/pizza/3.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="hamburgueria">
+          <img src="image/hamburguer/3.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pubs">
+          <img src="image/pub/FPD - 003.jpg" alt="" />
+        </div>
+        <div class="itemBox" data-item="sushi">
+          <img src="image/sushi/3.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="restaurante">
+          <img src="image/restaurante/3.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pizzaria">
+          <img src="image/pizza/4.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="hamburgueria">
+          <img src="image/hamburguer/4.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pubs">
+          <img src="image/pub/FPD - 004.jpg" alt="" />
+        </div>
+        <div class="itemBox" data-item="sushi">
+          <img src="image/sushi/4.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="restaurante">
+          <img src="image/restaurante/4.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pizzaria">
+          <img src="image/pizza/5.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="hamburgueria">
+          <img src="image/hamburguer/5.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="pubs">
+          <img src="image/pub/FPD - 005.jpg" alt="" />
+        </div>
+        <div class="itemBox" data-item="sushi">
+          <img src="image/sushi/5.png" alt="" />
+        </div>
+        <div class="itemBox" data-item="restaurante">
+          <img src="image/restaurante/5.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <script>
+      let list = document.querySelectorAll(".list");
+      let itemBox = document.querySelectorAll(".itemBox");
+
+      for (let i = 0; i < list.length; i++) {
+        list[i].addEventListener("click", function () {
+          for (let j = 0; j < list.length; j++) {
+            list[j].classList.remove("active");
+          }
+          this.classList.add("active");
+
+          let dataFilter = this.getAttribute("data-filter");
+          for (let k = 0; k < itemBox.length; k++) {
+            itemBox[k].classList.remove("active");
+            itemBox[k].classList.add("hide");
+
+            if (
+              itemBox[k].getAttribute("data-item") == dataFilter ||
+              dataFilter == "todos"
+            ) {
+              itemBox[k].classList.remove("hide");
+              itemBox[k].classList.add("active");
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
