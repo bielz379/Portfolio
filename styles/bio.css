@@ -4,12 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 body{
     display: grid;
     justify-items: center;
-    height: 110vh;
-  
+    height: 100vh;
 }
 :root{
     --fonte-principal: 'Slabo 27px', serif;
@@ -30,8 +30,7 @@ margin-top: 30px;
     height: 130px;
 }
 .container-links{
-    position: absolute;
-    bottom: 80px;
+
 }
 .links{
     display: flex;
@@ -58,12 +57,10 @@ margin-top: 30px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    
     font-size: 11px;
     color: var(--cor-items-secundário);
     background-color: var(--cor-items-principal);
     margin: 5px;
-    border-radius: 6px;
 }
 .links button:hover{
     box-shadow: 0 0 20px var(--cor-items-principal);
@@ -74,16 +71,14 @@ margin-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
+ 
 }
 footer{
     background: var(--cor-items-principal);
     width: 100%;
-    position: absolute;
-    bottom: -110px;
+    height: 100px;
     padding: 20px;
-
+    align-self: flex-end;
 }
 footer p{
     color: var(--cor-items-secundário);
@@ -91,6 +86,7 @@ footer p{
     font-family: var(--fonte-secundaria);
     font-weight: 400;
     font-size: 12px;
-    margin: 5px
+    margin: 5px;
+ 
 }
 
