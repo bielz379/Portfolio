@@ -10,7 +10,7 @@ body{
     display: grid;
     height: 100vh;
     justify-items: center;
-    background-image: url(/image/background/background\ desktop.png);
+    background-image: url(/image/background\ desktop.png);
     background-repeat: no-repeat;    
     background-position: center;
     background-size: cover;
@@ -106,7 +106,7 @@ footer p{
         height: 100px;
     }
     body{
-        background-image: url(/image/background/background\ mobile.png);
+        background-image: url(/image/background\ mobile.png);
     }
     img{
         display: none;
